@@ -5,10 +5,24 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fdf6f0;
+
+    /* NỀN CAO CẤP */
+    background:
+        radial-gradient(
+            rgba(153, 255, 0, 0.13) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            180deg,
+            #fdfdf8 0%,
+            #fffaf3 40%,
+            #f8f6f0 100%
+        );
+    background-size: 26px 26px, 100% 100%;
     color: #333;
     line-height: 1.6;
 }
+
 
 header .brand,
 header .brand:hover,
@@ -38,7 +52,9 @@ header {
 
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    will-change: transform;
 
     display: flex;
     flex-direction: column;
@@ -46,6 +62,13 @@ header {
 
     overflow: hidden; /* chuẩn bị cho animation an toàn */
 }
+
+/* ẨN HEADER KHI CUỘN XUỐNG */
+header.hide {
+    transform: translateY(-100%);
+    box-shadow: none;
+}
+
 
 /* Hiệu ứng ánh sáng lướt qua header */
 header::before {
@@ -258,7 +281,29 @@ nav a.active {
     border-radius: 12px;
 }
 
-/* ========================= */
+
+main {
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fffdf6 100%
+        );
+    border-radius: 18px;
+
+    margin: 2.5rem auto;
+    padding: 2.5rem 0;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(153, 255, 0, 0.15);
+}
+main.section {
+    padding: 0;
+}
+
+
+/* ================================================ */
 /* Media Queries */
 @media (max-width: 768px) {
     .hero {
@@ -322,6 +367,30 @@ nav a.active {
         font-size: 1.45em;
     }
 }
+
+/* NỀN CAO CẤP TRÊN MOBILE */
+@media (max-width: 768px) {
+    body {
+        background-size: 32px 32px, 100% 100%;
+    }
+}
+
+/* Giảm chuyển động nền cho người dùng ưu tiên giảm chuyển động */
+@media (prefers-reduced-motion: reduce) {
+    body {
+        background-attachment: initial;
+    }
+}
+
+/* Main trên mobile */
+@media (max-width: 768px) {
+    main {
+        border-radius: 0;
+        margin: 1.5rem 0;
+        padding: 1.5rem 0;
+    }
+}
+
 
 /* HEADER GLOW ANIMATION */
 @keyframes headerGlow {
