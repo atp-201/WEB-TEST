@@ -20,87 +20,87 @@
 </head>
 
 <body>
-<header class="site-header">
-  <div class="container">
-    <a href="index.html" class="brand">
-      <span class="brand-top">Rượu</span>
-      <span class="brand-strong">Cô Đào</span>
-    </a>
-    <nav class="nav">
-      <a href="index.html">Trang chủ</a>
-      <a href="gioi-thieu.html">Giới thiệu</a>
-      <a href="san-pham.html">Sản phẩm</a>
-      <a href="lien-he.html" class="active">Liên hệ</a>
-    </nav>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <span class="brand-top">Rượu</span>
+        <span class="brand-strong">Cô Đào</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Trang chủ</a>
+        <a href="gioi-thieu.html">Giới thiệu</a>
+        <a href="san-pham.html">Sản phẩm</a>
+        <a href="lien-he.html" class="active">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
 
-<main>
-  <section class="contact-section">
-      <h1>Liên Hệ Rượu Cô Đào</h1>
-      <p class="contact-note">
-          Liên hệ với chúng tôi
-      </p>
+  <main>
+    <section class="contact-section">
+        <h1>Liên Hệ Rượu Cô Đào</h1>
+        <p class="contact-note">
+            Liên hệ với chúng tôi
+        </p>
 
-      <!-- QR CODES -->
-      <div class="qr-wrapper">
+        <!-- QR CODES -->
+        <div class="qr-wrapper">
 
-          <!-- ZALO -->
-          <a href="https://zalo.me/0395193922"
-            target="_blank"
-            class="qr-item">
-              <img src="assets/qr/zalo-qr.png" alt="Zalo Rượu Cô Đào">
-              <span>Zalo</span>
-          </a>
+            <!-- ZALO -->
+            <a href="https://zalo.me/0395193922"
+              target="_blank"
+              class="qr-item">
+                <img src="assets/qr/zalo-qr.png" alt="Zalo Rượu Cô Đào">
+                <span>Zalo</span>
+            </a>
 
-          <!-- FACEBOOK -->
-          <a href="https://www.facebook.com/profile.php?id=61586723451492"
-            target="_blank"
-            class="qr-item">
-              <img src="assets/qr/facebook-qr.png" alt="Facebook Rượu Cô Đào">
-              <span>Facebook</span>
-          </a>
+            <!-- FACEBOOK -->
+            <a href="https://www.facebook.com/profile.php?id=61586723451492"
+              target="_blank"
+              class="qr-item">
+                <img src="assets/qr/facebook-qr.png" alt="Facebook Rượu Cô Đào">
+                <span>Facebook</span>
+            </a>
 
-          <!-- TIKTOK -->
-          <a href="https://www.tiktok.com/@music.atp?_r=1&_t=ZS-931zFyf8Eyt"
-            target="_blank"
-            class="qr-item">
-              <img src="assets/qr/tiktok-qr.png" alt="TikTok Rượu Cô Đào">
-              <span>TikTok</span>
-          </a>
-      </div>
-    
-      <!-- MAP -->
-      <div class="map-box">
-          <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15707.3307!2d107.645083!3d11.735306!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDQ0JzA3LjEiTiAxMDfCsDM4JzQyLjMiRQ!5e0!3m2!1svi!2s!4v0000000000000"
-              allowfullscreen=""
-              loading="lazy">
-          </iframe>
-      </div>
-      <button class="btn-open-map" onclick="openMap()">Mở bản đồ Google Maps</button>
-      <script>
-      function openMap() {
-        const lat = 11.735306;
-        const lng = 107.645083;
+            <!-- TIKTOK -->
+            <a href="https://www.tiktok.com/@music.atp?_r=1&_t=ZS-931zFyf8Eyt"
+              target="_blank"
+              class="qr-item">
+                <img src="assets/qr/tiktok-qr.png" alt="TikTok Rượu Cô Đào">
+                <span>TikTok</span>
+            </a>
+        </div>
+      
+        <!-- MAP -->
+        <div class="map-box">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15707.3307!2d107.645083!3d11.735306!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDQ0JzA3LjEiTiAxMDfCsDM4JzQyLjMiRQ!5e0!3m2!1svi!2s!4v0000000000000"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+        <button class="btn-open-map" onclick="openMap()">Mở bản đồ Google Maps</button>
+        <script>
+        function openMap() {
+          const lat = 11.735306;
+          const lng = 107.645083;
 
-        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+          const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-        if (isMobile) {
-          // 📱 Ưu tiên mở app Google Maps
-          window.location.href = `geo:${lat},${lng}?q=${lat},${lng}`;
-        } else {
-          // 💻 Mở Google Maps trên trình duyệt
-          window.open(
-            `https://www.google.com/maps?q=${lat},${lng}`,
-            "_blank"
-          );
+          if (isMobile) {
+            // 📱 Ưu tiên mở app Google Maps
+            window.location.href = `geo:${lat},${lng}?q=${lat},${lng}`;
+          } else {
+            // 💻 Mở Google Maps trên trình duyệt
+            window.open(
+              `https://www.google.com/maps?q=${lat},${lng}`,
+              "_blank"
+            );
+          }
         }
-      }
-      </script>
+        </script>
 
-  </section>
-</main>
+    </section>
+  </main>
 
 
 <!--
@@ -168,20 +168,42 @@
   </div>
 </footer>
  -->
-<script>
-document.getElementById('year5').textContent = new Date().getFullYear();
-</script>
+  <script>
+    document.getElementById('year5').textContent = new Date().getFullYear();
+  </script>
 
-<!-- MUSIC PLAYER -->
-<div class="music-player">
-  <button id="musicBtn">🔊 Nhạc</button>
-</div>
+  <!-- MUSIC PLAYER -->
+  <div class="music-player">
+    <button id="musicBtn">🔊 Nhạc</button>
+  </div>
 
-<audio id="bgMusic" loop>
-  <source src="mp3/VayCuoiCuaEmGiongNhuBongTuyet.mp3" type="audio/mpeg">
-</audio>
+  <audio id="bgMusic" loop>
+    <source src="mp3/VayCuoiCuaEmGiongNhuBongTuyet.mp3" type="audio/mpeg">
+  </audio>
 
-<script src="js/music.js"></script>
+  <script src="js/music.js"></script>
+  <script>
+    let lastScroll = 0;
+    const header = document.querySelector("header");
+
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= 0) {
+            header.classList.remove("hide");
+            lastScroll = 0;
+            return;
+        }
+
+        if (currentScroll > lastScroll && currentScroll > 80) {
+            header.classList.add("hide"); // cuộn xuống
+        } else {
+            header.classList.remove("hide"); // cuộn lên
+        }
+
+        lastScroll = currentScroll;
+    });
+  </script>
 
 </body>
 </html>
