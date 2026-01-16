@@ -52,43 +52,18 @@
     </div>
   </footer>
 
-  <script>
-  document.getElementById('year2').textContent = new Date().getFullYear();
-  </script>
-
-
   <!-- MUSIC PLAYER -->
   <div class="music-player">
     <button id="musicBtn">🔊 Nhạc</button>
   </div>
 
-  <audio id="bgMusic" loop>
+  <audio id="bgMusic" loop preload="auto">
     <source src="mp3/VayCuoiCuaEmGiongNhuBongTuyet.mp3" type="audio/mpeg">
   </audio>
 
+  <script src="js/hide.js"></script>
   <script src="js/music.js"></script>
-  <script>
-    let lastScroll = 0;
-    const header = document.querySelector("header");
-
-    window.addEventListener("scroll", () => {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll <= 0) {
-            header.classList.remove("hide");
-            lastScroll = 0;
-            return;
-        }
-
-        if (currentScroll > lastScroll && currentScroll > 80) {
-            header.classList.add("hide"); // cuộn xuống
-        } else {
-            header.classList.remove("hide"); // cuộn lên
-        }
-
-        lastScroll = currentScroll;
-    });
-  </script>
+  
 </body>
 </html>
 
