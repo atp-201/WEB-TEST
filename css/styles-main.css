@@ -89,7 +89,8 @@ header::before {
 }
 
 
-/* ===== LOGO CHỮ CƠ BẢN ===== */
+/* ===== LOGO CHỮ CƠ BẢN (dự phòng) ===== */
+/*
 header .brand {
     font-size: clamp(1.5rem, 3vw, 2rem);
     color: #c0392b;
@@ -97,7 +98,7 @@ header .brand {
     display: block;
     margin-bottom: 0.5rem;
 }
- */
+*/
 /* ===== LOGO CHỮ CAO CẤP ===== */
 header .brand {
     text-align: center;
@@ -506,4 +507,3 @@ main.section {
     transform: translateY(120vh);
   }
 }
-
